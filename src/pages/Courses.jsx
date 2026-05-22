@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import { coursesData } from "../data/courses"; 
 
 function Courses() {
-  // 1. Setup State for Search and Categories
+ 
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
 
-  // 2. Filter Logic: Combining search and category selection
   const filteredCourses = coursesData.filter((course) => {
     const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = activeCategory === "All" || course.category === activeCategory;
