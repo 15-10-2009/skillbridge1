@@ -33,7 +33,7 @@ function Login() {
 
   return (
     <div className="auth-container">
-      {/* LEFT FORM */}
+      {}
       <div className="auth-box">
         <h2>Welcome to SkillBridge Pro 🚀</h2>
         <p>Login / Register to continue learning</p>
@@ -80,7 +80,7 @@ function Login() {
         </form>
       </div>
 
-      {/* RIGHT INFO PANEL */}
+      {}
       <div className="auth-info">
         <h2>Why SkillBridge Pro?</h2>
 

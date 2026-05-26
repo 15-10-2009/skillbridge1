@@ -22,7 +22,7 @@ function Courses() {
         <p style={{ color: "#94a3b8" }}>Master the most in-demand tech skills.</p>
       </header>
 
-      {/* SEARCH & FILTER SECTION */}
+      {}
       <div className="toolbar" style={styles.toolbar}>
         <input 
           type="text" 
@@ -49,7 +49,7 @@ function Courses() {
         </div>
       </div>
 
-      {/* GRID SECTION */}
+      {}
       <div className="grid" style={styles.grid}>
         {filteredCourses.length > 0 ? (
           filteredCourses.map((course) => (
@@ -81,7 +81,7 @@ function Courses() {
   );
 }
 
-// Advanced Styling for Internship Portfolio
+
 const styles = {
   container: { padding: "40px 5%", color: "white" },
   header: { marginBottom: "30px" },

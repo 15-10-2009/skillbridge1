@@ -6,10 +6,10 @@ function MyLearning() {
   const [myCourses, setMyCourses] = useState([]);
 
   useEffect(() => {
-    // 1. Get the list of enrolled IDs from localStorage
+    
     const savedIds = JSON.parse(localStorage.getItem("myCourses") || "[]");
     
-    // 2. Filter the master coursesData to find only the ones the user joined
+    
     const enrolledData = coursesData.filter((course) => 
       savedIds.includes(course.id)
     );
@@ -17,7 +17,7 @@ function MyLearning() {
     setMyCourses(enrolledData);
   }, []);
 
-  // Function to "Unenroll" (Optional but looks great for an internship project)
+  
   const handleUnenroll = (id) => {
     const updatedIds = myCourses.filter(c => c.id !== id).map(c => c.id);
     localStorage.setItem("myCourses", JSON.stringify(updatedIds));

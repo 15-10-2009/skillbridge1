@@ -5,14 +5,13 @@ import Swal from 'sweetalert2';
 
 function CourseDetail() {
   const { id } = useParams();
-  // Find the specific course from our data file using the URL ID
+  
   const course = coursesData.find((item) => item.id === id);
   
-  // State to track if the user is enrolled
+  
   const [isEnrolled, setIsEnrolled] = useState(false);
+useEffect(() => {
 
-  useEffect(() => {
-    // When page loads, check localStorage to see if user already enrolled
     const savedEnrollments = JSON.parse(localStorage.getItem("myCourses") || "[]");
     if (savedEnrollments.includes(id)) {
       setIsEnrolled(true);
@@ -23,19 +22,18 @@ function CourseDetail() {
     const savedEnrollments = JSON.parse(localStorage.getItem("myCourses") || "[]");
     
     if (!savedEnrollments.includes(id)) {
-      // 1. Add ID to the array and save to browser memory
+      
       savedEnrollments.push(id);
       localStorage.setItem("myCourses", JSON.stringify(savedEnrollments));
       
-      // 2. Update UI state
+      
       setIsEnrolled(true);
 
-      // 3. Show professional popup
       Swal.fire({
         title: 'Enrollment Successful!',
         text: `You have successfully joined ${course.title}.`,
         icon: 'success',
-        background: '#0f172a', // Dark theme matching your UI
+        background: '#0f172a', 
         color: '#fff',
         confirmButtonColor: '#2563eb',
         confirmButtonText: 'Start Learning'
@@ -43,7 +41,6 @@ function CourseDetail() {
     }
   };
 
-  // Error handling if the URL ID doesn't match any course
   if (!course) {
     return (
       <div style={{ color: 'white', padding: '100px', textAlign: 'center' }}>
@@ -55,12 +52,12 @@ function CourseDetail() {
 
   return (
     <div className="course-detail-container" style={styles.container}>
-      {/* Back Button */}
+      {}
       <Link to="/courses" style={styles.backLink}>
         ← Back to Explore
       </Link>
       
-      {/* Course Header */}
+      {}
       <div style={styles.header}>
         <span style={styles.categoryBadge}>{course.category}</span>
         <h1 style={styles.title}>{course.title}</h1>
@@ -72,13 +69,13 @@ function CourseDetail() {
 
       <hr style={styles.divider} />
 
-      {/* Description */}
+      {}
       <section style={styles.section}>
         <h3 style={styles.sectionTitle}>About this Course</h3>
         <p style={styles.descriptionText}>{course.description}</p>
       </section>
 
-      {/* Syllabus Section */}
+      {}
       <section style={styles.section}>
         <h3 style={styles.sectionTitle}>Course Syllabus</h3>
         <div style={styles.syllabusGrid}>
@@ -91,7 +88,7 @@ function CourseDetail() {
         </div>
       </section>
 
-      {/* Enroll Button */}
+      {}
       <button 
         onClick={handleEnroll}
         disabled={isEnrolled}
@@ -108,7 +105,7 @@ function CourseDetail() {
   );
 }
 
-// Inline Styles for a clean Dark UI
+
 const styles = {
   container: {
     padding: "60px 20px",

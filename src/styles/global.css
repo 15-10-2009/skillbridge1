@@ -1,26 +1,23 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", "Arial", sans-serif;
 }
 
-/* Body */
 body {
-  background: #0f172a; /* deep dark blue */
+  background: #0f172a; 
   color: #f8fafc;
   min-height: 100vh;
   line-height: 1.6;
 }
 
-/* Links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Buttons */
 button {
   cursor: pointer;
   border: none;
@@ -28,21 +25,14 @@ button {
   transition: all 0.3s ease;
 }
 
-/* ================================
-   NAVBAR
-================================ */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 18px 40px;
-
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(14px);
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
   position: sticky;
   top: 0;
   z-index: 100;
@@ -72,9 +62,7 @@ button {
   transform: translateY(-2px);
 }
 
-/* ================================
-   HOME / HERO SECTION
-================================ */
+
 .home {
   display: flex;
   justify-content: center;
@@ -89,13 +77,13 @@ button {
 }
 
 .hero h1 {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    background: linear-gradient(90deg, #60a5fa, #a78bfa);
-    -webkit-background-clip: text; 
-    background-clip: text;         
-    -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
@@ -104,35 +92,19 @@ button {
   margin-bottom: 30px;
 }
 
-/* Hero Button */
 .hero button {
   padding: 12px 26px;
   font-size: 16px;
-
   background: linear-gradient(135deg, #3b82f6, #6366f1);
   color: white;
-
   border-radius: 10px;
-
   box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
 }
 
-.hero button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
-}
 
-/* ================================
-   COURSES PAGE
-================================ */
 .courses {
   padding: 50px 20px;
   text-align: center;
-}
-
-.courses h1 {
-  font-size: 32px;
-  margin-bottom: 30px;
 }
 
 .grid {
@@ -141,35 +113,106 @@ button {
   gap: 20px;
 }
 
-/* Course Card */
 .card {
   background: rgba(255, 255, 255, 0.05);
   padding: 22px;
   border-radius: 14px;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   transition: all 0.3s ease;
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
   transform: translateY(-10px);
   border-color: #60a5fa;
-  box-shadow: 0 12px 30px rgba(96, 165, 250, 0.2);
 }
 
-.card h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  background: rgba(96, 165, 250, 0.2);
+  color: #60a5fa;
 }
 
-.card p {
-  color: #94a3b8;
+
+.students-page {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* ================= AUTH PAGE ================= */
+.page-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.student-card {
+  background: #1e293b; 
+  padding: 25px;
+  border-radius: 18px;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.student-card:hover {
+  transform: translateY(-10px);
+  border-color: #38bdf8;
+}
+
+.student-card h2 {
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.skills-box {
+  margin-top: 15px;
+}
+
+.skill-tag {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-right: 8px;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.delete-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #ef4444; 
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+  transform: scale(1.02);
+}
+
 
 .auth-container {
   display: flex;
@@ -188,15 +231,6 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.auth-box h2 {
-  margin-bottom: 10px;
-}
-
-.auth-box p {
-  color: #94a3b8;
-  margin-bottom: 20px;
-}
-
 .auth-form input,
 .auth-form select {
   width: 100%;
@@ -208,75 +242,18 @@ button {
   color: white;
 }
 
-.auth-form button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #3b82f6, #6366f1);
-  color: white;
-}
 
-.show-pass {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  margin-top: 5px;
-}
-
-.msg {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #cbd5e1;
-}
-
-.auth-info {
-  width: 350px;
-  padding: 30px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.auth-info ul {
-  margin-top: 15px;
-  color: #cbd5e1;
-  list-style: none;
-  line-height: 2;
-}
-
-.mini-card {
-  margin-top: 20px;
-  padding: 15px;
-  background: rgba(59, 130, 246, 0.1);
-  border-radius: 10px;
-}
-
-/* ================================
-   RESPONSIVE DESIGN
-================================ */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  .hero h1 { font-size: 34px; }
+  .nav { flex-direction: column; gap: 10px; }
+  .links { flex-wrap: wrap; justify-content: center; }
+  .page-title { font-size: 2rem; }
+  .students-page { padding: 20px; }
 }
-.badge {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 5px 10px;
-  font-size: 12px;
-  border-radius: 6px;
-  background: rgba(96, 165, 250, 0.2);
-  color: #60a5fa;
+
+.loading-text, .error-text {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: #94a3b8;
 }

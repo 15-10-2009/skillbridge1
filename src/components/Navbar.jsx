@@ -24,6 +24,7 @@ function Navbar() {
       <h2 className="logo" style={styles.logo}>SkillBridge Pro</h2>
 
       <div className="links" style={styles.links}>
+        <Link to="/students" style={styles.linkItem}>Students</Link>
         <Link to="/" style={styles.linkItem}>Home</Link>
         <Link to="/courses" style={styles.linkItem}>Explore Courses</Link>
         
@@ -34,6 +35,7 @@ function Navbar() {
         </Link>
         
         <Link to="/login" style={styles.loginBtn}>Login</Link>
+
       </div>
     </nav>
   );
